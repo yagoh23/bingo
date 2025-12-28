@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo 80</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Bingo da Família Gonçalves</h1>
+        <div class="header-content">
+            <div class="visor-sorteio">
+                <span>Número Sorteado</span>
+                <div id="numero-grande">--</div>
+            </div>
+
+            <div class="painel-vencedores">
+                <h3>Vencedores</h3>
+                <ul id="lista-vencedores"></ul>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="controles">
+            <button onclick="sortearNumero()" id="btn-sortear">Sortear Número</button>
+            <button onclick="abrirModalVencedor()">Registrar Vencedor</button>
+        </div>
+
+        <div id="grid-bingo" class="grid-container">
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <input type="text" id="nome-vencedor" placeholder="Nome do ganhador">
+            <button onclick="confirmarVencedor()">Adicionar</button>
+            <button onclick="fecharModal()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
