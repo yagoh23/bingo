@@ -8,7 +8,6 @@ let numerosSorteados = [];
 let totalNumeros = 80;
 let contadorSorteios = 0;
 
-// Inicializa o Grid de 1 a 80
 function criarGrid() {
     for (let i = 1; i <= totalNumeros; i++) {
         let div = document.createElement('div');
@@ -33,12 +32,12 @@ function sortearNumero() {
     numerosSorteados.push(numero);
     contadorSorteios++;
     
-    // Atualiza Visores
+
     numeroGrande.innerText = numero;
     document.getElementById(`num-${numero}`).classList.add('sorteado');
 }
 
-// Lógica de Vencedores
+
 function abrirModalVencedor() {
     modal.style.display = 'flex';
 }
